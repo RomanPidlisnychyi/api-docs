@@ -1,0 +1,15 @@
+.button {
+  position: absolute;
+  top: 50%;
+  left: -5px;
+  transform: translateY(-50%);
+  border: none;
+  outline: none;
+  width: 15px;
+  height: 15px;
+  background: url('../../images/circle-down.svg') center/100% no-repeat;
+}
+
+.active {
+  background: url('../../images/circle-up.svg') center/100% no-repeat;
+}

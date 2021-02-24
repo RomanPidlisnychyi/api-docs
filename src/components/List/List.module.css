@@ -1,0 +1,19 @@
+.list {
+  list-style: none;
+}
+
+.item {
+  padding-left: 15px;
+}
+
+.label {
+  margin-left: -15px;
+}
+
+.span {
+  border-radius: 3px;
+  background-color: #43cf90;
+  color: #fff;
+  padding: 5px 0 5px 5px;
+  margin-right: 10px;
+}
