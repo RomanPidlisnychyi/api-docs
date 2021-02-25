@@ -38,27 +38,17 @@ export default {
       items: [
         {
           method: 'get',
-          path: '/products',
-          label: 'Products',
-          req: '',
-        },
-        {
-          method: 'get',
           path: '/infobyday',
           label: 'Infobyday',
           req: '',
         },
         {
           method: 'get',
-          path: '/titles',
-          label: 'Titles',
-          req: '',
-        },
-        {
-          method: 'get',
           path: '/current',
           label: 'Current',
-          req: '',
+          req: `headers: {
+            Authorization: 'Bearer userToken',
+          }`,
         },
         {
           method: 'patch',
@@ -71,6 +61,24 @@ export default {
           desiredWeight: Number,
           bloodGroup: Number,
         }`,
+        },
+      ],
+    },
+    {
+      title: 'products',
+      items: [
+        {
+          method: 'get',
+          path: '/?сыр',
+          label: 'TitlesByQuery',
+          req: 'Поиск продуктов по квери строке',
+        },
+        {
+          method: 'get',
+          path: '/titles',
+          label: 'AllTitles',
+          req:
+            'Квери параметр не обьязателен по умолчанию ?lg=ru еще можно ?lg=ua',
         },
       ],
     },
@@ -91,7 +99,9 @@ export default {
           method: 'delete',
           path: '/:id',
           label: 'Delete',
-          req: '',
+          req: `{
+            date: String,
+          }`,
         },
       ],
     },
