@@ -3,10 +3,11 @@ import Layout from './components/Layout/Layout';
 import Title from './components/Title/Title';
 import List from './components/List/List';
 import Button from './components/Button/Button';
-import endpoints from './endpoints';
+import apiInfo from './apiInfo';
 import styles from './App.module.css';
 
 export default function App() {
+  const { apiName, endpoints } = apiInfo;
   const [list, setList] = useState(null);
 
   const btnHandler = e => {
@@ -17,8 +18,8 @@ export default function App() {
   };
   return (
     <Layout>
-      <h1>Health API</h1>
-      <p>Express API for Health, view what routes pass</p>
+      <h1>{apiName} API</h1>
+      <p>Express API for {apiName}, view what routes pass</p>
       {endpoints.map(endpoint => (
         <>
           <div className={styles.wrapper}>
