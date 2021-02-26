@@ -2,7 +2,7 @@
   "name": "docs",
   "version": "0.1.0",
   "private": true,
-  "homepage": "http://localhost:3001",
+  "homepage": "https://health-fsoff2.herokuapp.com",
   "dependencies": {
     "@testing-library/jest-dom": "^5.11.9",
     "@testing-library/react": "^11.2.5",

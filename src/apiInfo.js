@@ -120,6 +120,12 @@ export default {
           bloodGroup: Number,
         }`,
         },
+        {
+          method: 'get',
+          path: '/:category/:bloodGroup',
+          label: 'GetListNotRecomendedProductsByCategory',
+          req: 'exaple /notrecomendedproducts/зерновые/4',
+        },
       ],
     },
   ],
