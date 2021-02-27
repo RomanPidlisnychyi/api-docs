@@ -12,7 +12,8 @@ export default {
           name: String,
           email: String,
           password: String,
-        }`,
+          params:{age: Number...}
+        } params - not required fild`,
         },
         {
           method: 'put',
@@ -28,7 +29,7 @@ export default {
           path: '/logout',
           label: 'Logout',
           req: `headers: {
-            Authorization: 'Bearer userToken',
+            Authorization: 'Bearer accessToken',
           }`,
         },
       ],
@@ -47,7 +48,15 @@ export default {
           path: '/current',
           label: 'Current',
           req: `headers: {
-            Authorization: 'Bearer userToken',
+            Authorization: 'Bearer accessToken',
+          }`,
+        },
+        {
+          method: 'get',
+          path: '/refresh',
+          label: 'UpdateRefreshToken',
+          req: `headers: {
+            Authorization: 'Bearer refreshToken',
           }`,
         },
         {
@@ -111,7 +120,7 @@ export default {
         {
           method: 'post',
           path: '',
-          label: 'GetListNotRecomendedProducts',
+          label: 'GetListNotRecomendedProductsAndCalories',
           req: `{
           height: Number,
           age: Number,
