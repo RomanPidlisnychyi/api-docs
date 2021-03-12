@@ -20,9 +20,10 @@ export default {
           path: '/login',
           label: 'Login',
           req: `{
-          email: String,
-          password: String,
-        }`,
+            email: String,
+            password: String,
+            params:{age: Number...}
+          } params - not required fild`,
         },
         {
           method: 'patch',
@@ -39,7 +40,7 @@ export default {
       items: [
         {
           method: 'get',
-          path: '/infobyday',
+          path: '/infobyday/:date',
           label: 'Infobyday',
           req: '',
         },
@@ -62,7 +63,7 @@ export default {
         {
           method: 'patch',
           path: '/params',
-          label: 'Params',
+          label: 'UpdateUserParams',
           req: `{
           height: Number,
           age: Number,
@@ -81,6 +82,12 @@ export default {
           path: '/?сыр',
           label: 'TitlesByQuery',
           req: 'Поиск продуктов по квери строке',
+        },
+        {
+          method: 'get',
+          path: '/query/?сыр',
+          label: 'ProductsByQuery',
+          req: 'Более информативный ответ поиска продуктов по квери строке',
         },
         {
           method: 'get',
